@@ -18,7 +18,7 @@ class CharacterAdapter (
         return characters.size
     }
 
-    override fun getItem(position: Int): Any {
+    override fun getItem(position: Int): Character {
         return characters[position]
     }
 
@@ -45,7 +45,7 @@ class CharacterAdapter (
 
         val character = getItem(position)
 
-        binding.titleTextView.text = character.toString()
+        binding.titleTextView.text = character.name
         binding.deleteImageView.tag = character
         binding.deleteImageView.visibility = if (isDropdownView) View.GONE else View.VISIBLE
 
